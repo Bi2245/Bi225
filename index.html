@@ -1,45 +1,45 @@
-<!文档类型超文本标记语言 >
-< 超文本标记语言语言=“zh-通信网络（Communicating Net的缩写）” >
-< 头 >
-< 自指的字符集=“UTF八号” >
-< 自指的名字 = "视窗" 内容 = 宽度=设备宽度，初始比例=1.0 >
-<标题>森-我操作系统（Operating System）手机(2.1版)</t我tle >
-<风格>
-:root {
--手机-宽度:375像素
--手机-高度:750像素
--主文本:# 000;-次要-文本:# 8e8e93
--背景色:# f0f2f 5-QQ-blue:# 12b7f 5；
--电池-绿色:# 34c759-电池-红色:# ff3b30
--消息-绿色:# 34C759-论坛-橙:# FF9500
--设置-灰色:# 8E8E93-照片-蓝色:# 415ED0
--书籍-橙色:# FF9500-音乐-粉色:# FF2D55
--主题-紫色:# bf5af 2-JD-red:# e 31436；
--美团-黄:# ffc 300-eleme-blue:# 0088 ff；
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>森 - iOS手机 (v2.1)</title>
+    <style>
+        :root {
+            --phone-width: 375px;
+            --phone-height: 750px;
+            --primary-text: #000; --secondary-text: #8e8e93;
+            --background-color: #f0f2f5; --qq-blue: #12B7F5;
+            --battery-green: #34c759; --battery-red: #ff3b30;
+            --message-green: #34C759; --forum-orange: #FF9500;
+            --settings-gray: #8E8E93; --photos-blue: #415ED0;
+            --books-orange: #FF9500; --music-pink: #FF2D55;
+            --theme-purple: #BF5AF2; --jd-red: #E31436;
+            --meituan-yellow: #FFC300; --eleme-blue: #0088FF;
         }
 
-正文{显示器:灵活调整-内容:居中；对齐-项目：居中；身高:100vh背景色:#333;字体-家庭的: -苹果-系统，BlinkMacSystemFont，" Segoe 用户界面”，机器人，“Helvetica新“，Arial，无衬线；边距：0;}
-。电话容器{ 宽度:定义变量(-电话-宽度)；高度:定义变量(-电话-高度)；背景:# fff边框半径:40pxbox-shadow: 0 10px 40px rgba(0，0，0，0.3)；显示器:flex伸缩方向：列；溢出：隐藏；位置：相对；边框:8px纯色# 111;}
-。屏幕{宽度:100%;身高:100%;显示器:弯曲伸缩方向：列；位置：相对；背景色:var(-背景色)；}
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; }
+        .phone-container { width: var(--phone-width); height: var(--phone-height); background: #fff; border-radius: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); display: flex; flex-direction: column; overflow: hidden; position: relative; border: 8px solid #111; }
+        .screen { width: 100%; height: 100%; display: flex; flex-direction: column; position: relative; background-color: var(--background-color); }
 
         /* 状态栏样式 */
-。状态栏{高度:40便士x显示器：弯曲 证明合法-内容:空间-在...之间；对齐-项目：居中；填充:0 12px颜色：定义变量(-主要的-文本)；字体大小:16便士x字体粗细：600;位置：绝对；顶端:0；左:0;右:0;z指数:1100;背景色：透明；}
-。左项,。正确-项目 { 显示:弯曲；对齐-项目：居中；}
-。右-项目 { 缝隙:8px；}
-。时间 { 字体-重量:700；}
-。免打扰图标{左边距:12px字体大小：20便士x显示：无；}
-。网络容器{ 显示:弯曲；对齐-项目:居中；右边距:8px}
-。网络型{ 边缘-正确:8px；字体大小：14px}
-。信号条{ 显示:弯曲；对齐-项目:弯曲-结束；高度:14px}
-。信号条{宽度:4px背景色：当前颜色右边距:1px边框-半径：1px}
-。信号-酒吧:n-儿童(1){ 高度:5px；} .信号条:第n个孩子(2) {高度:7px} .信号-酒吧:n-儿童(3){ 高度:9px；} .信号-酒吧:n-儿童(4){ 高度:11px；} .信号-酒吧:n-儿童(5){ 高度:14px；右边距：0；}
-。电池容器{ 显示:弯曲；对齐-项目:居中；}
-        .电池-图标 { 宽度: 32px；高度: 16便士x；边界: 2px固体 当前颜色; 边界-半径: 5px；位置: 亲戚; 泛滥: 隐藏的; }
-        .电池-图标::在...之后 { 内容: ''；位置:绝对；右:-4px；top:4px；宽度:3px高度:8px背景色:currentColorborder-radius:0 3px 3px 0；}
-        .电池-水平 { 位置: 绝对的; 顶端: 1px；左边的: 1px；底部: 1px；背景-颜色: 当前颜色; 边界-半径: 甲氧芳芥x；宽度: 80%; 过渡: 宽度0.5s缓解, 背景-颜色0.5s缓解; }
-        .电池-文本 { 位置: 绝对的; 顶端: 50%; 左边的: 50%; 改变: 翻译(-50%, -50%); 字体-大小: 11px；字体-重量: 大胆的; 颜色: #111; z-指数: 2; }
-        .充电 .电池-水平 { 背景-颜色:var(--电池-绿色的); }
-        .低的-电池 .电池-水平 { 背景-颜色:var(--电池-红色); }
+        .status-bar { height: 40px; display: flex; justify-content: space-between; align-items: center; padding: 0 12px; color: var(--primary-text); font-size: 16px; font-weight: 600; position: absolute; top: 0; left: 0; right: 0; z-index: 1100; background-color: transparent; }
+        .left-items, .right-items { display: flex; align-items: center; }
+        .right-items { gap: 8px; }
+        .time { font-weight: 700; }
+        .dnd-icon { margin-left: 12px; font-size: 20px; display: none; }
+        .network-container { display: flex; align-items: center; margin-right: 8px; }
+        .network-type { margin-right: 8px; font-size: 14px; }
+        .signal-bars { display: flex; align-items: flex-end; height: 14px; }
+        .signal-bar { width: 4px; background-color: currentColor; margin-right: 1px; border-radius: 1px; }
+        .signal-bar:nth-child(1) { height: 5px; } .signal-bar:nth-child(2) { height: 7px; } .signal-bar:nth-child(3) { height: 9px; } .signal-bar:nth-child(4) { height: 11px; } .signal-bar:nth-child(5) { height: 14px; margin-right: 0; }
+        .battery-container { display: flex; align-items: center; }
+        .battery-icon { width: 32px; height: 16px; border: 2px solid currentColor; border-radius: 5px; position: relative; overflow: hidden; }
+        .battery-icon::after { content: ''; position: absolute; right: -4px; top: 4px; width: 3px; height: 8px; background-color: currentColor; border-radius: 0 3px 3px 0; }
+        .battery-level { position: absolute; top: 1px; left: 1px; bottom: 1px; background-color: currentColor; border-radius: 3px; width: 80%; transition: width 0.5s ease, background-color 0.5s ease; }
+        .battery-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 11px; font-weight: bold; color: #111; z-index: 2; }
+        .charging .battery-level { background-color: var(--battery-green); }
+        .low-battery .battery-level { background-color: var(--battery-red); }
 
         /* 灵动岛样式 */
         .dynamic-island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 140px; height: 40px; background-color: rgba(0, 0, 0, 0.8); border-radius: 25px; display: flex; justify-content: center; align-items: center; color: white; font-size: 16px; cursor: pointer; transition: all 0.3s ease; z-index: 1099; }
@@ -303,12 +303,12 @@
             <div class="app-container" id="photosContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('photosContainer')">←</div><div class="app-title">备忘录</div></div><div class="app-content"></div></div>
             
             <!-- 世界书应用 (更新) -->
-// -系统用户界面功能-
-函数updateTime() {
-const now = new Date()；
-const hours = now . get hours()；
-const minutes = now.getMinutes()。toString()。padStart(2，' 0 ')；
-const ampm =小时> = 12？'下午' : '上午；
+            <div class="app-container" id="booksContainer">
+                <div class="app-header">
+                    <div class="app-back-btn" onclick="closeApp('booksContainer')">←</div>
+                    <div class="app-title">世界书</div>
+                </div>
+                <div class="app-content">
                     <div class="worldbook-menu">
                         <!-- 世界书功能菜单 -->
                         <div class="menu-section">
@@ -367,18 +367,18 @@ const ampm =小时> = 12？'下午' : '上午；
                     </div>
 
                     <!-- 世界书内容区域 -->
-                    <动态的class=岛 id="worldbookContent">
+                    <div class="worldbook-content" id="worldbookContent">
                         <!-- 动态加载的内容将显示在这里 -->
-                    </岛>
+                    </div>
                 </div>
-            </扩大>
+            </div>
 
-            <音乐class=控制 id="qqContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('qqContainer')">←</div><div class="app-title">QQ</div></div><div class="app-content"></div></div>
-            <音乐class=信息 id="musicContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('musicContainer')">←</div><div class="app-title">音乐</div></div><div class="app-content"></div></div>
-            <音乐class="app-container" id="themeContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('themeContainer')">←</div><div class="app-title">美化</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="qqContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('qqContainer')">←</div><div class="app-title">QQ</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="musicContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('musicContainer')">←</div><div class="app-title">音乐</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="themeContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('themeContainer')">←</div><div class="app-title">美化</div></div><div class="app-content"></div></div>
             <div class="app-container" id="jdContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('jdContainer')">←</div><div class="app-title">网购</div></div><div class="app-content"></div></div>
-            <音乐class=按钮 id="meituanContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('meituanContainer')">←</div><div class="app-title">外卖</div></div><div class="app-content"></div></div>
-        </音乐>
+            <div class="app-container" id="meituanContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('meituanContainer')">←</div><div class="app-title">外卖</div></div><div class="app-content"></div></div>
+        </div>
     </div>
     
     <script>
@@ -593,22 +593,22 @@ const ampm =小时> = 12？'下午' : '上午；
             });
             
             // 显示选中的内容区域
-const contentEl = document . getelementbyid(' world book content ')；const contentEl = document.getElementById('worldbookContent');
-contentel . style . display = ' block '；style.display = 'block';
+            const contentEl = document.getElementById('worldbookContent');
+            contentEl.style.display = 'block';
             
-// 根据标签名加载不同内容// 根据tabName加载不同内容
-开关(标签名){switch(tabName) {
-案例“创建”:case 'create':
-contentEl.innerHTML =innerHTML = `
-< h3 >创建新世界书</h3 >h3>创建新世界书</h3>
-< div class="form-group " >div class="form-group">
-<标签>世界书名称</label >label>世界书名称</label>
-< input type = " text " id = " world book name " placeholder = "输入世界书名称">input type="text" id="worldbookName" placeholder="输入世界书名称">
-</div >div>
-< div class="form-group " >div class="form-group">
-<标签>描述</label >label>描述</label>
-< textarea id = " worldbookDesc " placeholder = "输入世界书描述" > </textarea >textarea id="worldbookDesc" placeholder="输入世界书描述"></textarea>
-</div >div>
+            // 根据tabName加载不同内容
+            switch(tabName) {
+                case 'create':
+                    contentEl.innerHTML = `
+                        <h3>创建新世界书</h3>
+                        <div class="form-group">
+                            <label>世界书名称</label>
+                            <input type="text" id="worldbookName" placeholder="输入世界书名称">
+                        </div>
+                        <div class="form-group">
+                            <label>描述</label>
+                            <textarea id="worldbookDesc" placeholder="输入世界书描述"></textarea>
+                        </div>
                         <button class="btn-primary" onclick="createNewWorldbook()">创建</button>
                     `;
                     break;
@@ -803,23 +803,23 @@ contentEl.innerHTML =innerHTML = `
                 return;
             }
             
-const world book = system data . world books . library . find(WB = > WB . id = = = system data . world books . current)；
-如果(！worldbook)返回；
+            const worldbook = systemData.worldbooks.library.find(wb => wb.id === systemData.worldbooks.current);
+            if (!worldbook) return;
             
             // 创建下载链接
-const dataStr = JSON . stringify(world book，null，2)；
-const data uri = ' data:application/JSON；charset=utf-8，'+encodeURIComponent(dataStr)；
-常量导出文件名= `世界书_ $ { worldbook.name } _ $ {新日期()。toISOString()。slice(0，10)} . JSON `；
+            const dataStr = JSON.stringify(worldbook, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            const exportFileName = `世界书_${worldbook.name}_${new Date().toISOString().slice(0,10)}.json`;
             
             // 触发下载
-const link element = document . createelement(' a ')；
-linkElement.setAttribute('href '，data uri)；
-link element . set attribute(' download '，export filename)；
-link element . click()；
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileName);
+            linkElement.click();
         }
 
         // --- 数据管理功能 ---
-函数exportAllData() {
+        function exportAllData() {
             // 创建包含所有系统数据的对象
             const exportData = {
                 systemData: systemData,
@@ -885,87 +885,87 @@ link element . click()；
         function updateUIFromSystemData() {
             // 更新API设置表单
             document.getElementById('apiProvider').value = systemData.settings.apiProvider;
-document . getelementbyid(' API URL ')。value = system data . settings . API URL；
-document . getelementbyid(' API key ')。value = system data . settings . API key；
+            document.getElementById('apiUrl').value = systemData.settings.apiUrl;
+            document.getElementById('apiKey').value = systemData.settings.apiKey;
             
             // 更新当前模型显示
-updateCurrentModelDisplay()；
+            updateCurrentModelDisplay();
         }
 
-函数显示警报(消息){
-const status El = document . getelementbyid(' API status ')；
-status El . text content = message；
-status El . class name = ' API-状态成功'；
-setTimeout(() => {
-if(status El . text content = = = message){
-状态El。文本内容= " "；
-状态El。class name = ' API-status '；
+        function showAlert(message) {
+            const statusEl = document.getElementById('apiStatus');
+            statusEl.textContent = message;
+            statusEl.className = 'api-status success';
+            setTimeout(() => {
+                if (statusEl.textContent === message) {
+                    statusEl.textContent = '';
+                    statusEl.className = 'api-status';
                 }
             }, 3000);
         }
 
         // 保存系统数据到本地存储
-函数saveSystemData() {
-尝试{
-local storage . setitem(' system data '，JSON . stringify(system data))；
-} catch (e) {
-console.log('无法保存到本地存储:’，e)；
+        function saveSystemData() {
+            try {
+                localStorage.setItem('systemData', JSON.stringify(systemData));
+            } catch (e) {
+                console.log('无法保存到本地存储:', e);
             }
         }
 
-// -初始化-
-document . addevent listener(' DOMContentLoaded '，()=> {
-const appData = [
-{ id:'消息容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/YOpv/1186 x 1080/Image _ 1761364260618。巴布亚新几内亚'，名称:'信息' },
-{ id: 'forumContainer '，图标: ' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 21/KpZf/1079 x 1083/Image _ 1760785735649 . png '，名称:'论坛八卦' },
-{ id: 'settingsContainer '，图标: ' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/DWyy/1015 x861/Image _ 1761364260122 . png '，名称:'设置' },
-{ id:'phoneContainer',Icon:' https://TC 。Z的。wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/7 Nye/1208 x 1072/Image _ 1761364261254 .png ', Name: 'Telefon' },
-{ id:'图片容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/OJ0P/920 x 1024/Image _ 1760785734981。巴布亚新几内亚'，名称:'备忘录' },
-{ id:' book container '，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 21/yD6d/742 x 1024/Image _ 1760785734886。巴布亚新几内亚'，名称:'世界书' },
-{ id: 'qqContainer '，图标:' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/qu4r/527 x693/Image _ 1761364259317 . png '，名称:' QQ' }，
-{ id:'音乐容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/C1 S1/863 x793/Image _ 1761364257242。巴布亚新几内亚'，名称:'音乐' },
-{ id:'主题容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/wdgd/643 x630/Image _ 1761364259392。巴布亚新几内亚'，名称:'美化' },
-{ id: 'jdContainer '，图标:' https://TC .z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/h86b/640 x594/Image _ 1761364260149 .巴布亚新几内亚,名称:'网购' },
-{ id:'美团容器,图标:' https://TC .z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/L6Oz/985 x 1112/Image _ 1761364257742 .巴布亚新几内亚,名称:'外卖' },
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const appData = [
+                { id: 'messageContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/YOpv/1186X1080/Image_1761364260618.png', name: '信息' },
+                { id: 'forumContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251021/KpZf/1079X1083/Image_1760785735649.png', name: '论坛八卦' },
+                { id: 'settingsContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/DWyy/1015X861/Image_1761364260122.png', name: '设置' },
+                { id: 'phoneContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/7NYe/1208X1072/Image_1761364261254.png', name: '电话' },
+                { id: 'photosContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/OJ0P/920X1024/Image_1760785734981.png', name: '备忘录' },
+                { id: 'booksContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251021/yD6d/742X1024/Image_1760785734886.png', name: '世界书' },
+                { id: 'qqContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/qu4r/527X693/Image_1761364259317.png', name: 'QQ' },
+                { id: 'musicContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/C1S1/863X793/Image_1761364257242.png', name: '音乐' },
+                { id: 'themeContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/wdgd/643X630/Image_1761364259392.png', name: '美化' },
+                { id: 'jdContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/h86b/640X594/Image_1761364260149.png', name: '网购' },
+                { id: 'meituanContainer', icon: 'https://tc.z.wiki/autoupload/f/_dUEGnKEJQzmc-cKlsXN5NiO_OyvX7mIgxFBfDMDErs/20251025/L6Oz/985X1112/Image_1761364257742.png', name: '外卖' },
             ];
             
-const home screen = document . query selector('。主屏幕’)；
-抛出新错误('导入的文件格式不正确');
-const dockAppIds =[' phone container '，' messageContainer '，' photosContainer '，' settings container ']；
+            const homeScreen = document.querySelector('.home-screen');
+            const dockApps = document.querySelector('.dock-apps');
+            const dockAppIds = ['phoneContainer', 'messageContainer', 'photosContainer', 'settingsContainer'];
 
-// 检查是否已存在相同身份证明的世界书
-const现有索引=系统数据。世界图书。图书馆。查找索引(WB = > WB。id = = =导入的数据。id)；
-const container = isDockApp？dockApps:主屏；
-如果(现有索引> = 0) {
-如果(确认('已存在相同身份证明的世界书,是否覆盖?')) {
-系统数据。世界图书。库[现有索引]=导入的数据；
-el.innerHTML =
-}否则{
-系统数据。世界图书。图书馆。推送(导入数据)；
-/div>
-worldbooks: {
-saveSystemData()；
-当前:空
+            appData.forEach(app => {
+                const isDockApp = dockAppIds.includes(app.id);
+                const container = isDockApp ? dockApps : homeScreen;
+                const el = document.createElement('div');
+                el.className = isDockApp ? 'dock-app' : 'app-icon';
+                el.onclick = () => openApp(app.id);
+                el.innerHTML = `
+                    <div class="${isDockApp ? 'dock-app-icon' : 'app-icon-image'}">
+                        <img src="${app.icon}" alt="${app.name}">
+                    </div>
+                    ${!isDockApp ? `<div class="app-icon-name">${app.name}</div>` : ''}
+                `;
+                container.appendChild(el);
             });
 
-} catch(错误){
-警报(` 1导入失败:$ {错误。message } `)；
-console.error('导入世界书错误:',错误);
-const now = new Date()；
-恒定小时数=现在. get hours()；
-const minutes = now.getMinutes()。toString()。padStart(2，' 0 ')；
-常数ampm =小时> = 12?'下午' : '上午；
-const displayHours = hours % 12 12
-document.querySelector('。时间)。text content = ` $ { ampm } $ { display hours }:$ { minutes } `；
+            // 尝试从本地存储加载数据
+            try {
+                const savedData = localStorage.getItem('systemData');
+                if (savedData) {
+                    systemData = JSON.parse(savedData);
+                }
+            } catch (e) {
+                console.log('无法从本地存储加载数据:', e);
+            }
 
-/ /Laden der gespeichertenAPISetup auf Form
-updateUIFromSystemData();
+            // 加载已保存的API设置到表单
+            updateUIFromSystemData();
 
-更新时间()；
-更新电池()；
-setInterval(updateTime，1000)；
-setInterval(updateBattery，5000)；
+            updateTime();
+            updateBattery();
+            setInterval(updateTime, 1000);
+            setInterval(updateBattery, 5000);
         });
-</script>
+    </script>
 </body>
 </html>
