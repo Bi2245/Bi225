@@ -1,0 +1,971 @@
+<!文档类型超文本标记语言 >
+< 超文本标记语言语言=“zh-通信网络（Communicating Net的缩写）” >
+< 头 >
+< 自指的字符集=“UTF八号” >
+< 自指的名字 = "视窗" 内容 = 宽度=设备宽度，初始比例=1.0 >
+<标题>森-我操作系统（Operating System）手机(2.1版)</t我tle >
+<风格>
+:root {
+-手机-宽度:375像素
+-手机-高度:750像素
+-主文本:# 000;-次要-文本:# 8e8e93
+-背景色:# f0f2f 5-QQ-blue:# 12b7f 5；
+-电池-绿色:# 34c759-电池-红色:# ff3b30
+-消息-绿色:# 34C759-论坛-橙:# FF9500
+-设置-灰色:# 8E8E93-照片-蓝色:# 415ED0
+-书籍-橙色:# FF9500-音乐-粉色:# FF2D55
+-主题-紫色:# bf5af 2-JD-red:# e 31436；
+-美团-黄:# ffc 300-eleme-blue:# 0088 ff；
+        }
+
+正文{显示器:灵活调整-内容:居中；对齐-项目：居中；身高:100vh背景色:#333;字体-家庭的: -苹果-系统，BlinkMacSystemFont，" Segoe 用户界面”，机器人，“Helvetica新“，Arial，无衬线；边距：0;}
+。电话容器{ 宽度:定义变量(-电话-宽度)；高度:定义变量(-电话-高度)；背景:# fff边框半径:40pxbox-shadow: 0 10px 40px rgba(0，0，0，0.3)；显示器:flex伸缩方向：列；溢出：隐藏；位置：相对；边框:8px纯色# 111;}
+。屏幕{宽度:100%;身高:100%;显示器:弯曲伸缩方向：列；位置：相对；背景色:var(-背景色)；}
+
+        /* 状态栏样式 */
+。状态栏{高度:40便士x显示器：弯曲 证明合法-内容:空间-在...之间；对齐-项目：居中；填充:0 12px颜色：定义变量(-主要的-文本)；字体大小:16便士x字体粗细：600;位置：绝对；顶端:0；左:0;右:0;z指数:1100;背景色：透明；}
+。左项,。正确-项目 { 显示:弯曲；对齐-项目：居中；}
+。右-项目 { 缝隙:8px；}
+。时间 { 字体-重量:700；}
+。免打扰图标{左边距:12px字体大小：20便士x显示：无；}
+。网络容器{ 显示:弯曲；对齐-项目:居中；右边距:8px}
+。网络型{ 边缘-正确:8px；字体大小：14px}
+。信号条{ 显示:弯曲；对齐-项目:弯曲-结束；高度:14px}
+。信号条{宽度:4px背景色：当前颜色右边距:1px边框-半径：1px}
+。信号-酒吧:n-儿童(1){ 高度:5px；} .信号条:第n个孩子(2) {高度:7px} .信号-酒吧:n-儿童(3){ 高度:9px；} .信号-酒吧:n-儿童(4){ 高度:11px；} .信号-酒吧:n-儿童(5){ 高度:14px；右边距：0；}
+。电池容器{ 显示:弯曲；对齐-项目:居中；}
+        .电池-图标 { 宽度: 32px；高度: 16便士x；边界: 2px固体 当前颜色; 边界-半径: 5px；位置: 亲戚; 泛滥: 隐藏的; }
+        .电池-图标::在...之后 { 内容: ''；位置:绝对；右:-4px；top:4px；宽度:3px高度:8px背景色:currentColorborder-radius:0 3px 3px 0；}
+        .电池-水平 { 位置: 绝对的; 顶端: 1px；左边的: 1px；底部: 1px；背景-颜色: 当前颜色; 边界-半径: 甲氧芳芥x；宽度: 80%; 过渡: 宽度0.5s缓解, 背景-颜色0.5s缓解; }
+        .电池-文本 { 位置: 绝对的; 顶端: 50%; 左边的: 50%; 改变: 翻译(-50%, -50%); 字体-大小: 11px；字体-重量: 大胆的; 颜色: #111; z-指数: 2; }
+        .充电 .电池-水平 { 背景-颜色:var(--电池-绿色的); }
+        .低的-电池 .电池-水平 { 背景-颜色:var(--电池-红色); }
+
+        /* 灵动岛样式 */
+        .dynamic-island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 140px; height: 40px; background-color: rgba(0, 0, 0, 0.8); border-radius: 25px; display: flex; justify-content: center; align-items: center; color: white; font-size: 16px; cursor: pointer; transition: all 0.3s ease; z-index: 1099; }
+        .dynamic-island.expanded { width: 320px; height: 90px; border-radius: 45px; flex-direction: column; }
+        .island-content { display: flex; align-items: center; }
+        .island-icon { margin-right: 10px; font-size: 18px; }
+        .expanded-content { display: none; text-align: center; margin-top: 8px; font-size: 14px; }
+        .expanded .expanded-content { display: block; }
+        .music-controls { display: none; flex-direction: column; align-items: center; width: 100%; padding: 10px; box-sizing: border-box; }
+        .music-info { font-size: 14px; margin-bottom: 8px; }
+        .music-progress { width: 90%; height: 4px; background-color: rgba(255,255,255,0.3); border-radius: 3px; margin-bottom: 8px; }
+        .music-progress-bar { height: 100%; width: 50%; background-color: white; border-radius: 3px; }
+        .music-buttons { display: flex; justify-content: center; align-items: center; }
+        .music-btn { margin: 0 8px; font-size: 18px; cursor: pointer; }
+
+        /* 主屏幕 & Dock (已更新) */
+        .home-screen { flex: 1; padding-top: 40px; padding-bottom: 100px; overflow-y: auto; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: min-content; gap: 20px; padding: 60px 20px 100px; }
+        .app-icon { display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
+        .app-icon-image { width: 60px; height: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; overflow: hidden; background-color: white; padding: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .app-icon-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 11px; }
+        .app-icon-name { font-size: 12px; color: var(--primary-text); text-align: center; }
+        .dock { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background-color: rgba(240, 242, 245, 0.8); backdrop-filter: blur(12px); display: flex; justify-content: center; align-items: center; padding: 0 25px; }
+        .dock-apps { display: flex; justify-content: space-around; width: 100%; }
+        .dock-app { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+        .dock-app-icon { width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: white; padding: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .dock-app-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+
+        /* 底部导航栏 */
+        .home-indicator { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 120px; height: 5px; background-color: #000; border-radius: 3px; cursor: pointer; z-index: 1100; }
+        
+        /* 应用容器与页面 */
+        .app-container, .app-page { position: absolute; inset: 0; background-color: #f5f5f5; display: none; flex-direction: column; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease-in-out; }
+        .app-container.active, .app-page.active { display: flex; transform: translateX(0); }
+        .app-header { height: 50px; display: flex; align-items: center; padding: 0 15px; color: var(--primary-text); position: relative; background-color: #f7f7f7; border-bottom: 1px solid #ddd; flex-shrink: 0; }
+        .app-back-btn { font-size: 22px; cursor: pointer; padding: 5px 10px; margin-left: -10px; }
+        .app-title { flex: 1; text-align: center; font-weight: bold; font-size: 18px; position: absolute; left: 50%; transform: translateX(-50%); }
+        .app-content { flex: 1; padding: 20px; overflow-y: auto; }
+
+        /* 设置菜单样式 (新增) */
+        .settings-menu { display: flex; flex-direction: column; gap: 10px; }
+        .setting-item { background-color: white; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 16px; }
+        .setting-item:hover { background-color: #f0f0f0; }
+        .setting-item::after { content: '>'; color: #ccc; }
+
+        /* API 设置样式 */
+        .api-settings { display: flex; flex-direction: column; gap: 15px; }
+        .api-settings h2 { margin: 0 0 10px 0; font-size: 22px; }
+        .api-form-group { display: flex; flex-direction: column; }
+        .api-form-group label { margin-bottom: 5px; font-size: 14px; color: #555; }
+        .api-form-group select, .api-form-group input { padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
+        .api-actions { display: flex; gap: 10px; margin-top: 10px; }
+        .api-btn { flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.2s; }
+        .api-btn-primary { background-color: var(--qq-blue); color: white; }
+        .api-btn-secondary { background-color: #e0e0e0; color: #333; }
+        .api-status { margin-top: 15px; padding: 10px; border-radius: 8px; text-align: center; }
+        .api-status.success { background-color: #d4edda; color: #155724; }
+        .api-status.error { background-color: #f8d7da; color: #721c24; }
+        .api-models-list { margin-top: 20px; border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-height: 200px; overflow-y: auto; }
+        .api-models-list h3 { margin: 0 0 10px 0; }
+        .api-model-item { padding: 8px; border-bottom: 1px solid #eee; cursor: pointer; transition: background-color 0.2s; }
+        .api-model-item:hover { background-color: #f5f5f5; }
+        .api-model-item.selected { background-color: #e6f7ff; border-left: 3px solid var(--qq-blue); }
+        .api-model-item:last-child { border-bottom: none; }
+        .api-model-name { font-weight: bold; }
+        .api-model-id { font-size: 12px; color: #777; }
+        .current-model { margin-top: 15px; padding: 10px; background-color: #f0f8ff; border-radius: 8px; border: 1px solid #d0e8ff; }
+        .current-model h4 { margin: 0 0 5px 0; font-size: 16px; }
+        .current-model p { margin: 0; font-size: 14px; color: #555; }
+
+        /* 世界书菜单样式 */
+        .worldbook-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .menu-section h2 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .menu-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .menu-icon {
+            font-size: 24px;
+            margin-right: 12px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .menu-text {
+            font-size: 16px;
+            color: #333;
+        }
+        
+        /* 世界书内容区域 */
+        .worldbook-content {
+            display: none;
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 数据管理样式 */
+        .data-management {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .data-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .data-btn {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .data-btn-primary {
+            background-color: var(--qq-blue);
+            color: white;
+        }
+        
+        .data-btn-secondary {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+        
+        .file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="screen">
+            <!-- 状态栏 -->
+            <div class="status-bar">
+                <div class="left-items"><div class="time"></div><div class="dnd-icon">🌙</div></div>
+                <div class="right-items">
+                    <div class="network-container"><div class="network-type">5G</div><div class="signal-bars"><div class="signal-bar"></div><div class="signal-bar"></div><div class="signal-bar"></div><div class="signal-bar"></div><div class="signal-bar"></div></div></div>
+                    <div class="battery-container"><div class="battery-icon"><div class="battery-level"></div><div class="battery-text"></div></div></div>
+                </div>
+            </div>
+            
+            <!-- 灵动岛 -->
+            <div class="dynamic-island"><div class="island-content"><div class="island-icon">ㅇㅅㅇ</div><div>森</div></div></div>
+
+            <!-- 主屏幕 -->
+            <div class="home-screen"></div>
+
+            <!-- 底部导航栏 -->
+            <div class="dock"><div class="dock-apps"></div></div>
+            
+            <!-- Home指示器 -->
+            <div class="home-indicator" onclick="returnToHome()"></div>
+        
+            <!-- 应用容器 -->
+            <div class="app-container" id="messageContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('messageContainer')">←</div><div class="app-title">信息</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="forumContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('forumContainer')">←</div><div class="app-title">论坛八卦</div></div><div class="app-content"></div></div>
+            
+            <!-- 设置应用 (重构) -->
+            <div class="app-container" id="settingsContainer">
+                <div class="app-header"><div class="app-back-btn" onclick="closeApp('settingsContainer')">←</div><div class="app-title">设置</div></div>
+                <div class="app-content">
+                    <div class="settings-menu">
+                        <div class="setting-item" onclick="openAppPage('apiSettingsPage')">API与模型设置</div>
+                        <div class="setting-item" onclick="openAppPage('dataManagementPage')">数据管理</div>
+                        <div class="setting-item">通用</div>
+                        <div class="setting-item">显示与亮度</div>
+                        <div class="setting-item">墙纸</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- API设置页面 (新增) -->
+            <div class="app-page" id="apiSettingsPage">
+                <div class="app-header"><div class="app-back-btn" onclick="closeAppPage('apiSettingsPage')">←</div><div class="app-title">API设置</div></div>
+                <div class="app-content">
+                    <div class="api-settings">
+                        <!-- 当前模型显示 -->
+                        <div class="current-model" id="currentModelDisplay" style="display: none;">
+                            <h4>当前选定模型</h4>
+                            <p id="currentModelName">无</p>
+                        </div>
+                        
+                        <div class="api-form-group">
+                            <label for="apiProvider">API接口模型供应商</label>
+                            <select id="apiProvider">
+                                <option value="openai">OpenAI</option>
+                                <option value="anthropic">Anthropic</option>
+                                <option value="google">Google Gemini</option>
+                                <option value="custom">自定义</option>
+                            </select>
+                        </div>
+                        <div class="api-form-group">
+                            <label for="apiUrl">填写URL链接</label>
+                            <input type="url" id="apiUrl" placeholder="https://api.openai.com">
+                        </div>
+                        <div class="api-form-group">
+                            <label for="apiKey">输入API密钥</label>
+                            <input type="password" id="apiKey" placeholder="输入您的API密钥">
+                        </div>
+                        <div class="api-actions">
+                            <button class="api-btn api-btn-primary" onclick="fetchModels()">获取模型</button>
+                            <button class="api-btn api-btn-secondary" onclick="testApiConnection()">测试模型</button>
+                        </div>
+                        <div class="api-status" id="apiStatus"></div>
+                        <div class="api-models-list" id="apiModelsList" style="display: none;"></div>
+                        <div class="api-actions" style="margin-top: 20px;">
+                            <button class="api-btn api-btn-primary" onclick="saveApiSettings()">保存设置</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数据管理页面 (新增) -->
+            <div class="app-page" id="dataManagementPage">
+                <div class="app-header"><div class="app-back-btn" onclick="closeAppPage('dataManagementPage')">←</div><div class="app-title">数据管理</div></div>
+                <div class="app-content">
+                    <div class="data-management">
+                        <h2>数据备份与恢复</h2>
+                        <div class="data-actions">
+                            <button class="data-btn data-btn-primary" onclick="exportAllData()">导出全部数据</button>
+                            <button class="data-btn data-btn-secondary" onclick="document.getElementById('importFile').click()">导入数据</button>
+                            <input type="file" id="importFile" class="file-input" accept=".json" onchange="importData(this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-container" id="phoneContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('phoneContainer')">←</div><div class="app-title">电话</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="photosContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('photosContainer')">←</div><div class="app-title">备忘录</div></div><div class="app-content"></div></div>
+            
+            <!-- 世界书应用 (更新) -->
+// -系统用户界面功能-
+函数updateTime() {
+const now = new Date()；
+const hours = now . get hours()；
+const minutes = now.getMinutes()。toString()。padStart(2，' 0 ')；
+const ampm =小时> = 12？'下午' : '上午；
+                    <div class="worldbook-menu">
+                        <!-- 世界书功能菜单 -->
+                        <div class="menu-section">
+                            <h2>世界书管理</h2>
+                            <div class="menu-item" onclick="openWorldbookTab('create')">
+                                <div class="menu-icon">📖</div>
+                                <div class="menu-text">创建新世界书</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('library')">
+                                <div class="menu-icon">📚</div>
+                                <div class="menu-text">世界书库</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('import')">
+                                <div class="menu-icon">⬇️</div>
+                                <div class="menu-text">导入世界书</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('export')">
+                                <div class="menu-icon">⬆️</div>
+                                <div class="menu-text">导出世界书</div>
+                            </div>
+                        </div>
+
+                        <!-- 世界书编辑功能 -->
+                        <div class="menu-section">
+                            <h2>编辑工具</h2>
+                            <div class="menu-item" onclick="openWorldbookTab('characters')">
+                                <div class="menu-icon">👥</div>
+                                <div class="menu-text">角色管理</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('locations')">
+                                <div class="menu-icon">🗺️</div>
+                                <div class="menu-text">地点管理</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('timeline')">
+                                <div class="menu-icon">⏳</div>
+                                <div class="menu-text">时间线</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('relations')">
+                                <div class="menu-icon">🔗</div>
+                                <div class="menu-text">关系图</div>
+                            </div>
+                        </div>
+
+                        <!-- 世界书设置 -->
+                        <div class="menu-section">
+                            <h2>设置</h2>
+                            <div class="menu-item" onclick="openWorldbookTab('settings')">
+                                <div class="menu-icon">⚙️</div>
+                                <div class="menu-text">世界书设置</div>
+                            </div>
+                            <div class="menu-item" onclick="openWorldbookTab('templates')">
+                                <div class="menu-icon">📝</div>
+                                <div class="menu-text">模板管理</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 世界书内容区域 -->
+                    <动态的class=岛 id="worldbookContent">
+                        <!-- 动态加载的内容将显示在这里 -->
+                    </岛>
+                </div>
+            </扩大>
+
+            <音乐class=控制 id="qqContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('qqContainer')">←</div><div class="app-title">QQ</div></div><div class="app-content"></div></div>
+            <音乐class=信息 id="musicContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('musicContainer')">←</div><div class="app-title">音乐</div></div><div class="app-content"></div></div>
+            <音乐class="app-container" id="themeContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('themeContainer')">←</div><div class="app-title">美化</div></div><div class="app-content"></div></div>
+            <div class="app-container" id="jdContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('jdContainer')">←</div><div class="app-title">网购</div></div><div class="app-content"></div></div>
+            <音乐class=按钮 id="meituanContainer"><div class="app-header"><div class="app-back-btn" onclick="closeApp('meituanContainer')">←</div><div class="app-title">外卖</div></div><div class="app-content"></div></div>
+        </音乐>
+    </div>
+    
+    <script>
+        // --- SYSTEM DATA ---
+        let systemData = {
+            battery: { level: 80, isCharging: false },
+            settings: { 
+                apiProvider: 'openai', 
+                apiKey: '', 
+                apiUrl: '',
+                selectedModel: null
+            },
+            worldbooks: {
+                library: [],
+                current: null
+            }
+        };
+
+        // --- SYSTEM UI FUNCTIONS ---
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? '下午' : '上午';
+            const displayHours = hours % 12 || 12;
+            document.querySelector('.time').textContent = `${ampm}${displayHours}:${minutes}`;
+        }
+
+        function updateBattery() {
+            const batteryIcon = document.querySelector('.battery-icon');
+            const batteryLevelEl = document.querySelector('.battery-level');
+            const batteryText = document.querySelector('.battery-text');
+            if (!systemData.battery.isCharging && systemData.battery.level > 0) systemData.battery.level -= 0.05;
+            batteryLevelEl.style.width = `${systemData.battery.level}%`;
+            batteryText.textContent = Math.round(systemData.battery.level);
+            batteryIcon.classList.toggle('low-battery', !systemData.battery.isCharging && systemData.battery.level <= 20);
+        }
+
+        // --- APP NAVIGATION ---
+        function openApp(appId) {
+            const appContainer = document.getElementById(appId);
+            if(appContainer) appContainer.classList.add('active');
+        }
+
+        function closeApp(appId) {
+            const appContainer = document.getElementById(appId);
+            if(appContainer) appContainer.classList.remove('active');
+        }
+
+        function openAppPage(pageId) {
+            const page = document.getElementById(pageId);
+            if(page) page.classList.add('active');
+        }
+
+        function closeAppPage(pageId) {
+            const page = document.getElementById(pageId);
+            if(page) page.classList.remove('active');
+        }
+
+        function returnToHome() {
+            document.querySelectorAll('.app-container.active, .app-page.active').forEach(el => el.classList.remove('active'));
+        }
+
+        // --- API FUNCTIONS (REAL IMPLEMENTATION) ---
+        async function fetchModels() {
+            const provider = document.getElementById('apiProvider').value;
+            let apiUrl = document.getElementById('apiUrl').value.trim();
+            const apiKey = document.getElementById('apiKey').value.trim();
+            const statusEl = document.getElementById('apiStatus');
+            const modelsListEl = document.getElementById('apiModelsList');
+            
+            modelsListEl.style.display = 'none';
+            modelsListEl.innerHTML = '';
+            if (!apiUrl || !apiKey) {
+                statusEl.textContent = '错误：请填写完整的API URL和密钥。';
+                statusEl.className = 'api-status error';
+                return;
+            }
+            
+            statusEl.textContent = '正在获取模型列表...';
+            statusEl.className = 'api-status';
+
+            // 智能处理URL
+            if (apiUrl.endsWith('/')) apiUrl = apiUrl.slice(0, -1);
+            if (provider === 'openai' && !apiUrl.endsWith('/v1')) apiUrl += '/v1';
+
+            let requestUrl = `${apiUrl}/models`;
+            let headers = { 'Content-Type': 'application/json' };
+
+            // 根据供应商设置不同的认证头
+            if (provider === 'openai' || provider === 'custom') {
+                headers['Authorization'] = `Bearer ${apiKey}`;
+            } else if (provider === 'anthropic') {
+                headers['x-api-key'] = apiKey;
+                headers['anthropic-version'] = '2023-06-01'; // Anthropic需要版本头
+            } else if (provider === 'google') {
+                requestUrl = `${apiUrl}/v1beta/models?key=${apiKey}`;
+                headers = {}; // Google Gemini Key在URL中
+            }
+
+            try {
+                const response = await fetch(requestUrl, { headers });
+                if (!response.ok) {
+                    const errorData = await response.text();
+                    throw new Error(`请求失败 (${response.status}): ${errorData}`);
+                }
+                const data = await response.json();
+                
+                let models = [];
+                if (provider === 'openai' || provider === 'custom') models = data.data || [];
+                else if (provider === 'anthropic') models = data.data || []; // Anthropic新版API也是data
+                else if (provider === 'google') models = data.models || [];
+
+                if (models.length > 0) {
+                    modelsListEl.innerHTML = '<h3>可用模型列表 (点击选择)</h3>';
+                    models.forEach(model => {
+                        const modelId = model.id || model.name;
+                        const modelName = model.id || model.name || model.displayName;
+                        const modelEl = document.createElement('div');
+                        modelEl.className = 'api-model-item';
+                        modelEl.dataset.modelId = modelId;
+                        modelEl.dataset.modelName = modelName;
+                        modelEl.innerHTML = `<div class="api-model-name">${modelName.split('/').pop()}</div><div class="api-model-id">ID: ${modelId}</div>`;
+                        
+                        // 添加点击事件以选择模型
+                        modelEl.addEventListener('click', () => {
+                            // 移除之前的选择
+                            document.querySelectorAll('.api-model-item.selected').forEach(item => {
+                                item.classList.remove('selected');
+                            });
+                            
+                            // 标记当前选择
+                            modelEl.classList.add('selected');
+                            
+                            // 保存到系统设置
+                            systemData.settings.selectedModel = {
+                                id: modelId,
+                                name: modelName
+                            };
+                            
+                            // 更新当前模型显示
+                            updateCurrentModelDisplay();
+                        });
+                        
+                        modelsListEl.appendChild(modelEl);
+                    });
+                    modelsListEl.style.display = 'block';
+                    statusEl.textContent = `成功获取 ${models.length} 个模型，请点击选择一个模型`;
+                    statusEl.className = 'api-status success';
+                } else {
+                    statusEl.textContent = '警告：API成功响应，但未找到可用模型。';
+                    statusEl.className = 'api-status error';
+                }
+            } catch (error) {
+                statusEl.textContent = `获取模型失败: ${error.message}`;
+                statusEl.className = 'api-status error';
+                console.error('获取模型失败详情:', error);
+            }
+        }
+
+        // 更新当前模型显示
+        function updateCurrentModelDisplay() {
+            const currentModelDisplay = document.getElementById('currentModelDisplay');
+            const currentModelName = document.getElementById('currentModelName');
+            
+            if (systemData.settings.selectedModel) {
+                currentModelName.textContent = systemData.settings.selectedModel.name;
+                currentModelDisplay.style.display = 'block';
+            } else {
+                currentModelDisplay.style.display = 'none';
+            }
+        }
+
+        async function testApiConnection() {
+            const statusEl = document.getElementById('apiStatus');
+            statusEl.textContent = '正在测试连接...';
+            statusEl.className = 'api-status';
+            await fetchModels(); // 复用获取模型的逻辑来测试
+            if (statusEl.classList.contains('success')) {
+                statusEl.textContent = 'API连接测试成功！';
+            }
+        }
+
+        function saveApiSettings() {
+            systemData.settings.apiProvider = document.getElementById('apiProvider').value;
+            systemData.settings.apiUrl = document.getElementById('apiUrl').value.trim();
+            systemData.settings.apiKey = document.getElementById('apiKey').value.trim();
+            
+            const statusEl = document.getElementById('apiStatus');
+            
+            // 检查是否已选择模型
+            if (systemData.settings.selectedModel) {
+                statusEl.textContent = `API设置已保存，已选择模型: ${systemData.settings.selectedModel.name}`;
+            } else {
+                statusEl.textContent = 'API设置已保存，但未选择模型。';
+            }
+            
+            statusEl.className = 'api-status success';
+            
+            // 更新当前模型显示
+            updateCurrentModelDisplay();
+            
+            // 保存到本地存储
+            saveSystemData();
+        }
+
+        // --- 世界书功能 ---
+        function openWorldbookTab(tabName) {
+            // 隐藏所有内容区域
+            document.querySelectorAll('.worldbook-content').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // 显示选中的内容区域
+const contentEl = document . getelementbyid(' world book content ')；const contentEl = document.getElementById('worldbookContent');
+contentel . style . display = ' block '；style.display = 'block';
+            
+// 根据标签名加载不同内容// 根据tabName加载不同内容
+开关(标签名){switch(tabName) {
+案例“创建”:case 'create':
+contentEl.innerHTML =innerHTML = `
+< h3 >创建新世界书</h3 >h3>创建新世界书</h3>
+< div class="form-group " >div class="form-group">
+<标签>世界书名称</label >label>世界书名称</label>
+< input type = " text " id = " world book name " placeholder = "输入世界书名称">input type="text" id="worldbookName" placeholder="输入世界书名称">
+</div >div>
+< div class="form-group " >div class="form-group">
+<标签>描述</label >label>描述</label>
+< textarea id = " worldbookDesc " placeholder = "输入世界书描述" > </textarea >textarea id="worldbookDesc" placeholder="输入世界书描述"></textarea>
+</div >div>
+                        <button class="btn-primary" onclick="createNewWorldbook()">创建</button>
+                    `;
+                    break;
+                    
+                case 'library':
+                    contentEl.innerHTML = `
+                        <h3>世界书库</h3>
+                        <div class="worldbook-list" id="worldbookList">
+                            <!-- 世界书列表将通过JS动态加载 -->
+                        </div>
+                    `;
+                    loadWorldbookLibrary();
+                    break;
+                    
+                case 'import':
+                    contentEl.innerHTML = `
+                        <h3>导入世界书</h3>
+                        <p>从文件导入世界书数据</p>
+                        <button class="btn-primary" onclick="document.getElementById('worldbookImportFile').click()">选择文件</button>
+                        <input type="file" id="worldbookImportFile" class="file-input" accept=".json" onchange="importWorldbook(this)">
+                    `;
+                    break;
+                    
+                case 'export':
+                    contentEl.innerHTML = `
+                        <h3>导出世界书</h3>
+                        <p>将当前世界书导出为文件</p>
+                        <button class="btn-primary" onclick="exportCurrentWorldbook()">导出</button>
+                    `;
+                    break;
+                    
+                // 其他tab的实现类似...
+            }
+        }
+        
+        function createNewWorldbook() {
+            const name = document.getElementById('worldbookName').value;
+            const desc = document.getElementById('worldbookDesc').value;
+            
+            if (!name) {
+                alert('请输入世界书名称');
+                return;
+            }
+            
+            const newWorldbook = {
+                id: Date.now().toString(),
+                name: name,
+                description: desc,
+                createdAt: new Date().toISOString(),
+                characters: [],
+                locations: [],
+                timeline: []
+            };
+            
+            systemData.worldbooks.library.push(newWorldbook);
+            systemData.worldbooks.current = newWorldbook.id;
+            
+            // 保存数据
+            saveSystemData();
+            
+            alert(`世界书 "${name}" 创建成功！`);
+        }
+        
+        function loadWorldbookLibrary() {
+            const listEl = document.getElementById('worldbookList');
+            
+            if (systemData.worldbooks.library.length === 0) {
+                listEl.innerHTML = '<p>暂无世界书，请先创建一个</p>';
+                return;
+            }
+            
+            listEl.innerHTML = '';
+            
+            systemData.worldbooks.library.forEach(worldbook => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'worldbook-item';
+                itemEl.innerHTML = `
+                    <div class="worldbook-title">${worldbook.name}</div>
+                    <div class="worldbook-desc">${worldbook.description || '无描述'}</div>
+                    <div class="worldbook-actions">
+                        <button onclick="openWorldbook('${worldbook.id}')">打开</button>
+                        <button onclick="editWorldbook('${worldbook.id}')">编辑</button>
+                    </div>
+                `;
+                listEl.appendChild(itemEl);
+            });
+        }
+        
+        function openWorldbook(id) {
+            const worldbook = systemData.worldbooks.library.find(wb => wb.id === id);
+            if (!worldbook) return;
+            
+            systemData.worldbooks.current = id;
+            
+            // 更新UI显示当前世界书
+            document.getElementById('worldbookContent').innerHTML = `
+                <h3>${worldbook.name}</h3>
+                <p>${worldbook.description || '无描述'}</p>
+                <div class="worldbook-stats">
+                    <div>角色: ${worldbook.characters.length}</div>
+                    <div>地点: ${worldbook.locations.length}</div>
+                    <div>事件: ${worldbook.timeline.length}</div>
+                </div>
+            `;
+        }
+        
+        function editWorldbook(id) {
+            const worldbook = systemData.worldbooks.library.find(wb => wb.id === id);
+            if (!worldbook) return;
+            
+            document.getElementById('worldbookContent').innerHTML = `
+                <h3>编辑世界书: ${worldbook.name}</h3>
+                <div class="form-group">
+                    <label>名称</label>
+                    <input type="text" id="editWorldbookName" value="${worldbook.name}">
+                </div>
+                <div class="form-group">
+                    <label>描述</label>
+                    <textarea id="editWorldbookDesc">${worldbook.description || ''}</textarea>
+                </div>
+                <button class="btn-primary" onclick="saveWorldbookChanges('${id}')">保存</button>
+            `;
+        }
+        
+        function saveWorldbookChanges(id) {
+            const worldbook = systemData.worldbooks.library.find(wb => wb.id === id);
+            if (!worldbook) return;
+            
+            const newName = document.getElementById('editWorldbookName').value;
+            const newDesc = document.getElementById('editWorldbookDesc').value;
+            
+            if (!newName) {
+                alert('世界书名称不能为空');
+                return;
+            }
+            
+            worldbook.name = newName;
+            worldbook.description = newDesc;
+            
+            saveSystemData();
+            
+            alert('世界书修改已保存');
+            loadWorldbookLibrary();
+        }
+        
+        function importWorldbook(input) {
+            const file = input.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    // 验证数据格式
+                    if (!importedData.id || !importedData.name) {
+                        throw new Error('导入的文件格式不正确');
+                    }
+                    
+                    // 检查是否已存在相同ID的世界书
+                    const existingIndex = systemData.worldbooks.library.findIndex(wb => wb.id === importedData.id);
+                    
+                    if (existingIndex >= 0) {
+                        if (confirm('已存在相同ID的世界书，是否覆盖？')) {
+                            systemData.worldbooks.library[existingIndex] = importedData;
+                        }
+                    } else {
+                        systemData.worldbooks.library.push(importedData);
+                    }
+                    
+                    saveSystemData();
+                    loadWorldbookLibrary();
+                    
+                    alert('世界书导入成功！');
+                } catch (error) {
+                    alert(`导入失败: ${error.message}`);
+                    console.error('导入世界书错误:', error);
+                }
+                
+                // 重置文件输入，允许重复导入同一文件
+                input.value = '';
+            };
+            reader.onerror = function() {
+                alert('读取文件失败');
+            };
+            reader.readAsText(file);
+        }
+        
+        function exportCurrentWorldbook() {
+            if (!systemData.worldbooks.current) {
+                alert('请先打开一个世界书');
+                return;
+            }
+            
+const world book = system data . world books . library . find(WB = > WB . id = = = system data . world books . current)；
+如果(！worldbook)返回；
+            
+            // 创建下载链接
+const dataStr = JSON . stringify(world book，null，2)；
+const data uri = ' data:application/JSON；charset=utf-8，'+encodeURIComponent(dataStr)；
+常量导出文件名= `世界书_ $ { worldbook.name } _ $ {新日期()。toISOString()。slice(0，10)} . JSON `；
+            
+            // 触发下载
+const link element = document . createelement(' a ')；
+linkElement.setAttribute('href '，data uri)；
+link element . set attribute(' download '，export filename)；
+link element . click()；
+        }
+
+        // --- 数据管理功能 ---
+函数exportAllData() {
+            // 创建包含所有系统数据的对象
+            const exportData = {
+                systemData: systemData,
+                timestamp: new Date().toISOString()
+            };
+            
+            // 转换为JSON字符串
+            const dataStr = JSON.stringify(exportData, null, 2);
+            
+            // 创建下载链接
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            const exportFileName = `森手机数据备份_${new Date().toISOString().slice(0, 10)}.json`;
+            
+            // 触发下载
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileName);
+            linkElement.click();
+            
+            // 显示成功消息
+            showAlert('数据导出成功！');
+        }
+
+        function importData(input) {
+            const file = input.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    // 验证数据格式
+                    if (!importedData.systemData || !importedData.systemData.settings) {
+                        throw new Error('导入的文件格式不正确');
+                    }
+                    
+                    // 显示确认对话框
+                    if (confirm('确定要导入数据吗？这将覆盖当前所有设置。')) {
+                        // 导入数据
+                        systemData = importedData.systemData;
+                        
+                        // 更新UI
+                        updateUIFromSystemData();
+                        
+                        // 显示成功消息
+                        showAlert('数据导入成功！');
+                    }
+                    
+                    // 重置文件输入，允许重复导入同一文件
+                    input.value = '';
+                } catch (error) {
+                    showAlert(`导入失败: ${error.message}`);
+                    console.error('导入数据错误:', error);
+                }
+            };
+            reader.onerror = function() {
+                showAlert('读取文件失败');
+            };
+            reader.readAsText(file);
+        }
+
+        function updateUIFromSystemData() {
+            // 更新API设置表单
+            document.getElementById('apiProvider').value = systemData.settings.apiProvider;
+document . getelementbyid(' API URL ')。value = system data . settings . API URL；
+document . getelementbyid(' API key ')。value = system data . settings . API key；
+            
+            // 更新当前模型显示
+updateCurrentModelDisplay()；
+        }
+
+函数显示警报(消息){
+const status El = document . getelementbyid(' API status ')；
+status El . text content = message；
+status El . class name = ' API-状态成功'；
+setTimeout(() => {
+if(status El . text content = = = message){
+状态El。文本内容= " "；
+状态El。class name = ' API-status '；
+                }
+            }, 3000);
+        }
+
+        // 保存系统数据到本地存储
+函数saveSystemData() {
+尝试{
+local storage . setitem(' system data '，JSON . stringify(system data))；
+} catch (e) {
+console.log('无法保存到本地存储:’，e)；
+            }
+        }
+
+// -初始化-
+document . addevent listener(' DOMContentLoaded '，()=> {
+const appData = [
+{ id:'消息容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/YOpv/1186 x 1080/Image _ 1761364260618。巴布亚新几内亚'，名称:'信息' },
+{ id: 'forumContainer '，图标: ' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 21/KpZf/1079 x 1083/Image _ 1760785735649 . png '，名称:'论坛八卦' },
+{ id: 'settingsContainer '，图标: ' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/DWyy/1015 x861/Image _ 1761364260122 . png '，名称:'设置' },
+{ id:'phoneContainer',Icon:' https://TC 。Z的。wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/7 Nye/1208 x 1072/Image _ 1761364261254 .png ', Name: 'Telefon' },
+{ id:'图片容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/OJ0P/920 x 1024/Image _ 1760785734981。巴布亚新几内亚'，名称:'备忘录' },
+{ id:' book container '，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 21/yD6d/742 x 1024/Image _ 1760785734886。巴布亚新几内亚'，名称:'世界书' },
+{ id: 'qqContainer '，图标:' https://TC . z . wiki/auto upload/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/qu4r/527 x693/Image _ 1761364259317 . png '，名称:' QQ' }，
+{ id:'音乐容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/C1 S1/863 x793/Image _ 1761364257242。巴布亚新几内亚'，名称:'音乐' },
+{ id:'主题容器'，图标:' https://TC。z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/wdgd/643 x630/Image _ 1761364259392。巴布亚新几内亚'，名称:'美化' },
+{ id: 'jdContainer '，图标:' https://TC .z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/h86b/640 x594/Image _ 1761364260149 .巴布亚新几内亚,名称:'网购' },
+{ id:'美团容器,图标:' https://TC .z . wiki/自动上传/f/_ dUEGnKEJQzmc-cklsxn 5 nio _ oy VX 7 migxfbdmders/2025 10 25/L6Oz/985 x 1112/Image _ 1761364257742 .巴布亚新几内亚,名称:'外卖' },
+            ];
+            
+const home screen = document . query selector('。主屏幕’)；
+抛出新错误('导入的文件格式不正确');
+const dockAppIds =[' phone container '，' messageContainer '，' photosContainer '，' settings container ']；
+
+// 检查是否已存在相同身份证明的世界书
+const现有索引=系统数据。世界图书。图书馆。查找索引(WB = > WB。id = = =导入的数据。id)；
+const container = isDockApp？dockApps:主屏；
+如果(现有索引> = 0) {
+如果(确认('已存在相同身份证明的世界书,是否覆盖?')) {
+系统数据。世界图书。库[现有索引]=导入的数据；
+el.innerHTML =
+}否则{
+系统数据。世界图书。图书馆。推送(导入数据)；
+/div>
+worldbooks: {
+saveSystemData()；
+当前:空
+            });
+
+} catch(错误){
+警报(` 1导入失败:$ {错误。message } `)；
+console.error('导入世界书错误:',错误);
+const now = new Date()；
+恒定小时数=现在. get hours()；
+const minutes = now.getMinutes()。toString()。padStart(2，' 0 ')；
+常数ampm =小时> = 12?'下午' : '上午；
+const displayHours = hours % 12 12
+document.querySelector('。时间)。text content = ` $ { ampm } $ { display hours }:$ { minutes } `；
+
+/ /Laden der gespeichertenAPISetup auf Form
+updateUIFromSystemData();
+
+更新时间()；
+更新电池()；
+setInterval(updateTime，1000)；
+setInterval(updateBattery，5000)；
+        });
+</script>
+</body>
+</html>
